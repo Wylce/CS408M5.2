@@ -1,4 +1,365 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+/* || General setup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+  background-color: #dde;
+}
+
+body {
+  width: 80%;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+
+a {
+  font-size: 1.5em;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:active{
+  color:rgb(192, 0, 192);
+}
+
+a:visited{
+  color:purple;
+}
+
+/* || typography */
+
+h1, h2, h3 {
+  font-family: 'Sonsie One', cursive;
+  color: white;
+}
+
+p, input, li, table, label {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p, li, table {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  color: white;
+}
+
+/* || header layout */
+
+nav, article, footer, .secondary {
+  background-color: #242424;
+}
+
+article, footer, .secondary {
+  padding: 10px 30px;
+}
+
+article {
+  margin-right: 10px;
+}
+
+nav {
+  height: 50px;
+  background-color: #242424;
+  display: flex;
+  padding: 1% 0;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+  align-self: center;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover{
+  color:rgb(111, 202, 255);
+  font-size: 3.1rem;
+}
+
+nav a:active{
+  color: rgb(154, 231, 255);
+}
+
+nav .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2em;
+}
+
+.search input {
+  font-size: 1.6rem;
+  height: 32px;
+
+  border: 2px inset white;
+
+}
+
+.search input[type="search"] {
+  flex: 3;
+}
+
+.search input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  font-size: 18px;
+  background: #333;
+  border: 2px inset white;
+  color: white;
+  cursor: pointer;
+}
+
+.search input[type="submit"]:hover {
+  font-size: 20px;
+}
+
+.search input[type="submit"]:active {
+  background-color:#181818;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+}
+
+article {
+  flex: 5;
+}
+
+.secondary {
+  flex: 2;
+}
+
+.secondary ul{
+  padding: 25px;
+  background-color:#dde;
+  list-style: none;
+  height: 90%;
+}
+
+.secondary ul li{
+  box-shadow: -3px 0px 0 black;
+}
+
+.secondary ul li a{
+  padding-bottom: 10px;
+  box-shadow: -3px 0px 0 black;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 2em;
+}
+
+.secondary ul li a:hover{
+  box-shadow: -3px 2px 0 rgb(136, 136, 136);
+}
+
+footer {
+  margin-top: 10px;
+}
+
+/* Table styling */
+
+table {
+  width: 100%;
+  background-color: #dde;
+  border-collapse: collapse;
+}
+
+table caption{
+  color: white;
+  background-color:#242424;
+}
+
+th, td {
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+th[scope="col"] {
+  border-bottom: 1px solid white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #def;
+}
+
+/* styling content images and audio */
+
+img, audio {
+  display: block;
+  margin: 0 auto;
+}
+
+audio {
+  width: 500px;
+}
+
+.audio-transcript{
+  text-align: center;
+  padding: 10px
+}
+
+/* Comments styling */
+
+.comments {
+  background-color: #def;
+  padding: 10px;
+}
+
+.show-hide {
+  cursor: pointer;
+}
+
+.comments h2 {
+  color: black;
+}
+
+.comments h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.comments h3:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+.comment-form {
+  margin-bottom: 3rem;
+}
+
+.comment-form .flex-pair {
+  display: flex;
+  padding: 0 3rem 1rem;
+}
+
+.comment-form label {
+  align-self: center;
+  flex: 2;
+  text-align: right;
+}
+
+.comment-form input {
+  margin-left: 1rem;
+  flex: 6;
+}
+
+button {
+  text-align: center;
+  font-size: 1.4em;
+  width: 150px;
+  min-height: 50px;
+  background: #333;
+  border: 2px inset white;
+  color: white;
+
+  cursor: pointer;
+}
+
+button:hover{
+  font-size: 1.5em;
+}
+
+button:active{
+  background-color:#181818;
+}
+
+.comment-form input, .comment-form label {
+  font-size: 1.6rem;
+  line-height: 32px;
+}
+
+.comment-form input[type="submit"], .show-hide {
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+.comment-form input[type="submit"] {
+  width: 30%;
+  height: 50px;
+  font-size: 1.5em;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.comment-form input[type="submit"]:hover {
+  font-size: 1.6em;
+}
+
+.comment-form input[type="submit"]:active {
+  background-color:#181818;
+}
+
+.comment-container {
+  margin-top: 0;
+  
+}
+
+.comment-container li {
+  list-style-type: none;
+  display: flex;
+
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: 2px solid black;
+}
+
+.comment-container li p:nth-child(1) {
+  flex: 1;
+  font-weight: bold;
+  color: black;
+}
+
+.comment-container li p:nth-child(2) {
+  flex: 5;
+  color: black;
 }
