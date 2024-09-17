@@ -6,7 +6,7 @@ September 16, 2024
 
 ## Overview
 
-A simple informational website about bears that's been edited as an exercise in webpage accesibility.
+A simple informational website about bears that's been edited as an exercise in webpage accessibility.
 
 ## Accessibility Lab Answers
 
